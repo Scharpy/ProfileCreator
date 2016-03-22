@@ -32,5 +32,11 @@ namespace ProfileCreator
         {
             RefreshQuestsCombo();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Player me = new Player();
+            HotspotListBox.Items.Add("Name = "+HotspotNameTextBox+", X = "+ me.Position().X+", Y = "+ me.Position().Y + ", Z = " + me.Position().Z);
+        }
     }
 }

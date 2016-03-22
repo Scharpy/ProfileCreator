@@ -47,6 +47,7 @@ namespace ProfileCreator
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.CurrentQuestRefreshButton = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,9 +72,9 @@ namespace ProfileCreator
             this.button12 = new System.Windows.Forms.Button();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.HotspotListBox = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.HotspotNameTextBox = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -95,7 +96,6 @@ namespace ProfileCreator
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.CurrentQuestRefreshButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -371,6 +371,16 @@ namespace ProfileCreator
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Managment";
             // 
+            // CurrentQuestRefreshButton
+            // 
+            this.CurrentQuestRefreshButton.Location = new System.Drawing.Point(228, 121);
+            this.CurrentQuestRefreshButton.Name = "CurrentQuestRefreshButton";
+            this.CurrentQuestRefreshButton.Size = new System.Drawing.Size(61, 23);
+            this.CurrentQuestRefreshButton.TabIndex = 13;
+            this.CurrentQuestRefreshButton.Text = "Refresh";
+            this.CurrentQuestRefreshButton.UseVisualStyleBackColor = true;
+            this.CurrentQuestRefreshButton.Click += new System.EventHandler(this.button15_Click);
+            // 
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(214, 93);
@@ -577,9 +587,9 @@ namespace ProfileCreator
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.listBox4);
+            this.groupBox8.Controls.Add(this.HotspotListBox);
             this.groupBox8.Controls.Add(this.label10);
-            this.groupBox8.Controls.Add(this.textBox8);
+            this.groupBox8.Controls.Add(this.HotspotNameTextBox);
             this.groupBox8.Controls.Add(this.button9);
             this.groupBox8.Controls.Add(this.button8);
             this.groupBox8.Location = new System.Drawing.Point(538, 12);
@@ -589,13 +599,13 @@ namespace ProfileCreator
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Hotpots";
             // 
-            // listBox4
+            // HotspotListBox
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(6, 19);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(228, 186);
-            this.listBox4.TabIndex = 4;
+            this.HotspotListBox.FormattingEnabled = true;
+            this.HotspotListBox.Location = new System.Drawing.Point(6, 19);
+            this.HotspotListBox.Name = "HotspotListBox";
+            this.HotspotListBox.Size = new System.Drawing.Size(228, 186);
+            this.HotspotListBox.TabIndex = 4;
             // 
             // label10
             // 
@@ -606,12 +616,12 @@ namespace ProfileCreator
             this.label10.TabIndex = 3;
             this.label10.Text = "Name";
             // 
-            // textBox8
+            // HotspotNameTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(47, 211);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 2;
+            this.HotspotNameTextBox.Location = new System.Drawing.Point(47, 211);
+            this.HotspotNameTextBox.Name = "HotspotNameTextBox";
+            this.HotspotNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.HotspotNameTextBox.TabIndex = 2;
             // 
             // button9
             // 
@@ -630,6 +640,7 @@ namespace ProfileCreator
             this.button8.TabIndex = 0;
             this.button8.Text = "Add current location";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // groupBox5
             // 
@@ -809,16 +820,6 @@ namespace ProfileCreator
             this.listBox3.Size = new System.Drawing.Size(197, 82);
             this.listBox3.TabIndex = 0;
             // 
-            // CurrentQuestRefreshButton
-            // 
-            this.CurrentQuestRefreshButton.Location = new System.Drawing.Point(228, 121);
-            this.CurrentQuestRefreshButton.Name = "CurrentQuestRefreshButton";
-            this.CurrentQuestRefreshButton.Size = new System.Drawing.Size(61, 23);
-            this.CurrentQuestRefreshButton.TabIndex = 13;
-            this.CurrentQuestRefreshButton.Text = "Refresh";
-            this.CurrentQuestRefreshButton.UseVisualStyleBackColor = true;
-            this.CurrentQuestRefreshButton.Click += new System.EventHandler(this.button15_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -913,9 +914,9 @@ namespace ProfileCreator
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox HotspotListBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox HotspotNameTextBox;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
