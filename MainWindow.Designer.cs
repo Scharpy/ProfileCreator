@@ -96,6 +96,7 @@ namespace ProfileCreator
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -338,6 +339,7 @@ namespace ProfileCreator
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.treeView1);
             this.groupBox4.Controls.Add(this.groupBox10);
             this.groupBox4.Controls.Add(this.groupBox9);
             this.groupBox4.Controls.Add(this.groupBox8);
@@ -366,7 +368,7 @@ namespace ProfileCreator
             this.groupBox10.Controls.Add(this.listBox5);
             this.groupBox10.Location = new System.Drawing.Point(6, 19);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(295, 446);
+            this.groupBox10.Size = new System.Drawing.Size(295, 203);
             this.groupBox10.TabIndex = 4;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Managment";
@@ -820,6 +822,13 @@ namespace ProfileCreator
             this.listBox3.Size = new System.Drawing.Size(197, 82);
             this.listBox3.TabIndex = 0;
             // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(307, 25);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(225, 440);
+            this.treeView1.TabIndex = 5;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -945,6 +954,7 @@ namespace ProfileCreator
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button CurrentQuestRefreshButton;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

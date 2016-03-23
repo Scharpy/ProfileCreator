@@ -40,19 +40,21 @@ namespace SharpWoWData
     }
     class Player
     {
+        private static LocalPlayer Me = StyxWoW.Me;
         public string TargetName()
         {
-            LocalPlayer me = new LocalPlayer(new IntPtr());
-            return me.CurrentTarget.Name;
+            return Me.CurrentTarget.Name;
         }
-
-        public Hotspot Position()
+        public uint TargetEntry()
         {
-            LocalPlayer me = new LocalPlayer(new IntPtr());
+            return Me.CurrentTarget.Entry;
+        }
+        public Hotspot Position()
+        {            
             Hotspot position = new Hotspot();
-            position.X = Convert.ToDouble(me.X);
-            position.Y = Convert.ToDouble(me.Y);
-            position.Z = Convert.ToDouble(me.Z);
+            position.X = Convert.ToDouble(Me.X);
+            position.Y = Convert.ToDouble(Me.Y);
+            position.Z = Convert.ToDouble(Me.Z);
             return position;
         }
     }
