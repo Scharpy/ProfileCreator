@@ -50,9 +50,9 @@ namespace SharpWoWData
         {
             LocalPlayer me = new LocalPlayer(new IntPtr());
             Hotspot position = new Hotspot();
-            position.X = me.X;
-            position.Y = me.Y;
-            position.Z = me.Z;
+            position.X = Convert.ToDouble(me.X);
+            position.Y = Convert.ToDouble(me.Y);
+            position.Z = Convert.ToDouble(me.Z);
             return position;
         }
     }
