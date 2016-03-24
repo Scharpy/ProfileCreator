@@ -15,6 +15,7 @@ namespace ProfileCreator
 {
     public class QuestCreator : HBPlugin
     {
+        private MainWindow mainForm;
         public override string Author
         {
             get
@@ -40,7 +41,7 @@ namespace ProfileCreator
         {
             get
             {
-                return new Version(0, 0, 1);
+                return new Version(0, 0, 2);
             }
         }
         public override void Pulse()
@@ -53,7 +54,7 @@ namespace ProfileCreator
         }
         public override void OnDisable()
         {
-            Logging.Write("ProfileCreator disabled.", Colors.Blue);
+
         }
         public override bool WantButton
         {
@@ -64,8 +65,17 @@ namespace ProfileCreator
         }
         public override void OnButtonPress()
         {
-            MainWindow main = new MainWindow();
-            main.Show();
+            if (mainForm == null || mainForm.IsDisposed)
+                mainForm = new MainWindow();
+            try
+            {
+                mainForm.Show();
+                mainForm.Activate();
+            }
+            catch (ArgumentOutOfRangeException ee)
+            {
+
+            }
         }
     }
 }

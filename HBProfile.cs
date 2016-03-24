@@ -39,7 +39,9 @@ namespace ProfileCreator.HBProfile
         public List<Vendor> Vendors { get; set; }
         //public List<Task> Tasks { get; set; }
         [XmlElement("Quest")]
-        public List<Quest> Quests { get; set; }
+        public List<QuestOverride> Quests { get; set; }
+        [XmlElement("QuestOrder")]
+        public List<Quest> QuestOrder { get; set; }
 
         
         public QuestingProfile(string name)
@@ -49,7 +51,7 @@ namespace ProfileCreator.HBProfile
             Blackspots = new List<Blackspot>();
             Mailboxes = new List<Mailbox>();
             Vendors = new List<Vendor>();
-            Quests = new List<Quest>();
+            Quests = new List<QuestOverride>();
             //Tasks = new List<Task>();
         }
         public QuestingProfile()
@@ -58,7 +60,7 @@ namespace ProfileCreator.HBProfile
             Blackspots = new List<Blackspot>();
             Mailboxes = new List<Mailbox>();
             Vendors = new List<Vendor>();
-            Quests = new List<Quest>();
+            Quests = new List<QuestOverride>();
             //Tasks = new List<Task>();
         }
     }
@@ -208,17 +210,55 @@ namespace ProfileCreator.HBProfile
     [Serializable]
     public class Quest
     {
+        public PickUp PickUp;
+        public Objective Objective;
+        public TurnIn TurnIn;
+    }
+
+    [Serializable]
+    public class TurnIn
+    {
+        [XmlAttribute]
+        string QuestName;
+        [XmlAttribute]
+        uint QuestId;
+        [XmlAttribute]
+        string TurnInName;
+        [XmlAttribute]
+        uint TurnInId;
+        [XmlAttribute]
+        string Nav;
+    }
+
+    [Serializable]
+    public class PickUp
+    {
+        [XmlAttribute]
+        string QuestName;
+        [XmlAttribute]
+        uint QuestId;
+        [XmlAttribute]
+        string GiverName;
+        [XmlAttribute]
+        uint GiverId;
+        [XmlAttribute]
+        string Nav;
+    }
+
+    [Serializable]
+    public class QuestOverride
+    {
         [XmlAttribute]
         public uint Id;
         [XmlAttribute]
         public string Name;
         public Objective Objective;
-        public Quest(uint id, string name)
+        public QuestOverride(uint id, string name)
         {
             this.Id = id;
             this.Name = name;
         }
-        public Quest() { }        
+        public QuestOverride() { }        
     }
 
     [Serializable]
@@ -227,13 +267,15 @@ namespace ProfileCreator.HBProfile
         [XmlAttribute]
         public string Type;
         [XmlAttribute]
-        public int MobId;
+        public uint MobId;
         [XmlAttribute]
-        public int KillCount;
+        public uint KillCount;
         [XmlAttribute]
-        public int CollectCount;
+        public uint CollectCount;
         [XmlAttribute]
-        public int ItemId;
+        public uint ItemId;
+        [XmlAttribute]
+        public uint QuestId;
 
         public List<Collect> CollectFrom;
         public List<Hotspot> Hotspots;

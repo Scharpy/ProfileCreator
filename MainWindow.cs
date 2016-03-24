@@ -22,9 +22,10 @@ namespace ProfileCreator
         private void RefreshQuestsCombo()
         {
             questLogQuestsCombo.Items.Clear();
+            questLogQuestsCombo.Items.Add("Manual");
             foreach (var item in new QuestLogQuests().QuestList())
             {
-                questLogQuestsCombo.Items.Add(item);
+                questLogQuestsCombo.Items.Add(item);                
             }
         }
 
@@ -36,7 +37,13 @@ namespace ProfileCreator
         private void button8_Click(object sender, EventArgs e)
         {
             Player me = new Player();
-            HotspotListBox.Items.Add("Name = "+HotspotNameTextBox+", X = "+ me.Position().X+", Y = "+ me.Position().Y + ", Z = " + me.Position().Z); //Bug here
+            comboBox3.Items.Add("Name = "+HotspotNameTextBox.Text+", X = "+ me.Position().X+", Y = "+ me.Position().Y + ", Z = " + me.Position().Z);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Player me = new Player();            
+            MobComboBox.Items.Add(me.TargetEntry() + " - "+ me.TargetName());
         }
     }
 }

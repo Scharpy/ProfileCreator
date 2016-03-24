@@ -46,22 +46,21 @@ namespace ProfileCreator
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.CurrentQuestRefreshButton = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.QuestNameTextBox = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.QuestTypeCombobox = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.QuestIDTextBox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.questLogQuestsCombo = new System.Windows.Forms.ComboBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.QuestIDTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.QuestTypeCombobox = new System.Windows.Forms.ComboBox();
+            this.QuestNameTextBox = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.MobComboBox = new System.Windows.Forms.ComboBox();
             this.button14 = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -70,9 +69,8 @@ namespace ProfileCreator
             this.label16 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.listBox6 = new System.Windows.Forms.ListBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.HotspotListBox = new System.Windows.Forms.ListBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.HotspotNameTextBox = new System.Windows.Forms.TextBox();
             this.button9 = new System.Windows.Forms.Button();
@@ -96,12 +94,16 @@ namespace ProfileCreator
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.listBox3 = new System.Windows.Forms.ListBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.button15 = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button16 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -182,7 +184,7 @@ namespace ProfileCreator
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Location = new System.Drawing.Point(13, 140);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(174, 144);
+            this.groupBox1.Size = new System.Drawing.Size(172, 144);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mailing";
@@ -304,7 +306,7 @@ namespace ProfileCreator
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.checkBox11);
-            this.groupBox3.Location = new System.Drawing.Point(13, 440);
+            this.groupBox3.Location = new System.Drawing.Point(13, 439);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(172, 47);
             this.groupBox3.TabIndex = 11;
@@ -339,162 +341,148 @@ namespace ProfileCreator
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.treeView1);
-            this.groupBox4.Controls.Add(this.groupBox10);
+            this.groupBox4.Controls.Add(this.label19);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.button16);
+            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.button15);
+            this.groupBox4.Controls.Add(this.CurrentQuestRefreshButton);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.questLogQuestsCombo);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.QuestIDTextBox);
+            this.groupBox4.Controls.Add(this.comboBox2);
+            this.groupBox4.Controls.Add(this.button10);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.QuestTypeCombobox);
+            this.groupBox4.Controls.Add(this.QuestNameTextBox);
+            this.groupBox4.Controls.Add(this.button11);
             this.groupBox4.Controls.Add(this.groupBox9);
             this.groupBox4.Controls.Add(this.groupBox8);
             this.groupBox4.Location = new System.Drawing.Point(193, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(784, 474);
+            this.groupBox4.Size = new System.Drawing.Size(462, 474);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Quests";
             // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.CurrentQuestRefreshButton);
-            this.groupBox10.Controls.Add(this.button11);
-            this.groupBox10.Controls.Add(this.label15);
-            this.groupBox10.Controls.Add(this.label14);
-            this.groupBox10.Controls.Add(this.QuestNameTextBox);
-            this.groupBox10.Controls.Add(this.button10);
-            this.groupBox10.Controls.Add(this.label13);
-            this.groupBox10.Controls.Add(this.QuestTypeCombobox);
-            this.groupBox10.Controls.Add(this.label9);
-            this.groupBox10.Controls.Add(this.QuestIDTextBox);
-            this.groupBox10.Controls.Add(this.label12);
-            this.groupBox10.Controls.Add(this.label11);
-            this.groupBox10.Controls.Add(this.questLogQuestsCombo);
-            this.groupBox10.Controls.Add(this.listBox5);
-            this.groupBox10.Location = new System.Drawing.Point(6, 19);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(295, 203);
-            this.groupBox10.TabIndex = 4;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Managment";
-            // 
             // CurrentQuestRefreshButton
             // 
-            this.CurrentQuestRefreshButton.Location = new System.Drawing.Point(228, 121);
+            this.CurrentQuestRefreshButton.Location = new System.Drawing.Point(395, 74);
             this.CurrentQuestRefreshButton.Name = "CurrentQuestRefreshButton";
-            this.CurrentQuestRefreshButton.Size = new System.Drawing.Size(61, 23);
+            this.CurrentQuestRefreshButton.Size = new System.Drawing.Size(61, 22);
             this.CurrentQuestRefreshButton.TabIndex = 13;
             this.CurrentQuestRefreshButton.Text = "Refresh";
             this.CurrentQuestRefreshButton.UseVisualStyleBackColor = true;
             this.CurrentQuestRefreshButton.Click += new System.EventHandler(this.button15_Click);
             // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(214, 93);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 12;
-            this.button11.Text = "Remove";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 96);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Add a quest:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(142, 154);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Name";
-            // 
-            // QuestNameTextBox
-            // 
-            this.QuestNameTextBox.Location = new System.Drawing.Point(183, 150);
-            this.QuestNameTextBox.Name = "QuestNameTextBox";
-            this.QuestNameTextBox.Size = new System.Drawing.Size(106, 20);
-            this.QuestNameTextBox.TabIndex = 9;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(160, 176);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(129, 23);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "Add";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(57, 154);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(16, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Id";
-            // 
-            // QuestTypeCombobox
-            // 
-            this.QuestTypeCombobox.FormattingEnabled = true;
-            this.QuestTypeCombobox.Location = new System.Drawing.Point(73, 177);
-            this.QuestTypeCombobox.Name = "QuestTypeCombobox";
-            this.QuestTypeCombobox.Size = new System.Drawing.Size(81, 21);
-            this.QuestTypeCombobox.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 181);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Quest type:";
-            // 
-            // QuestIDTextBox
-            // 
-            this.QuestIDTextBox.Location = new System.Drawing.Point(79, 151);
-            this.QuestIDTextBox.Name = "QuestIDTextBox";
-            this.QuestIDTextBox.Size = new System.Drawing.Size(57, 20);
-            this.QuestIDTextBox.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 154);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 13);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Manual:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 125);
+            this.label11.Location = new System.Drawing.Point(188, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 13);
             this.label11.TabIndex = 4;
             this.label11.Text = "Current quest:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(12, 46);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 13);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Manual:";
+            // 
             // questLogQuestsCombo
             // 
             this.questLogQuestsCombo.FormattingEnabled = true;
-            this.questLogQuestsCombo.Location = new System.Drawing.Point(79, 122);
+            this.questLogQuestsCombo.Location = new System.Drawing.Point(267, 75);
             this.questLogQuestsCombo.Name = "questLogQuestsCombo";
-            this.questLogQuestsCombo.Size = new System.Drawing.Size(143, 21);
+            this.questLogQuestsCombo.Size = new System.Drawing.Size(123, 21);
             this.questLogQuestsCombo.TabIndex = 3;
             // 
-            // listBox5
+            // label13
             // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(6, 19);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(283, 69);
-            this.listBox5.TabIndex = 2;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 65);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(16, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Id";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 91);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Name";
+            // 
+            // QuestIDTextBox
+            // 
+            this.QuestIDTextBox.Location = new System.Drawing.Point(34, 62);
+            this.QuestIDTextBox.Name = "QuestIDTextBox";
+            this.QuestIDTextBox.Size = new System.Drawing.Size(107, 20);
+            this.QuestIDTextBox.TabIndex = 7;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(6, 19);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(450, 21);
+            this.comboBox2.TabIndex = 14;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(327, 202);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(129, 23);
+            this.button10.TabIndex = 5;
+            this.button10.Text = "Add quest to list";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 152);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Quest type:";
+            // 
+            // QuestTypeCombobox
+            // 
+            this.QuestTypeCombobox.FormattingEnabled = true;
+            this.QuestTypeCombobox.Location = new System.Drawing.Point(79, 146);
+            this.QuestTypeCombobox.Name = "QuestTypeCombobox";
+            this.QuestTypeCombobox.Size = new System.Drawing.Size(62, 21);
+            this.QuestTypeCombobox.TabIndex = 0;
+            // 
+            // QuestNameTextBox
+            // 
+            this.QuestNameTextBox.Location = new System.Drawing.Point(53, 88);
+            this.QuestNameTextBox.Name = "QuestNameTextBox";
+            this.QuestNameTextBox.Size = new System.Drawing.Size(88, 20);
+            this.QuestNameTextBox.TabIndex = 9;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(390, 46);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(66, 23);
+            this.button11.TabIndex = 12;
+            this.button11.Text = "Remove";
+            this.button11.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.MobComboBox);
             this.groupBox9.Controls.Add(this.button14);
             this.groupBox9.Controls.Add(this.textBox12);
             this.groupBox9.Controls.Add(this.label18);
@@ -503,34 +491,42 @@ namespace ProfileCreator
             this.groupBox9.Controls.Add(this.label16);
             this.groupBox9.Controls.Add(this.button13);
             this.groupBox9.Controls.Add(this.button12);
-            this.groupBox9.Controls.Add(this.listBox6);
-            this.groupBox9.Location = new System.Drawing.Point(538, 278);
+            this.groupBox9.Enabled = false;
+            this.groupBox9.Location = new System.Drawing.Point(9, 335);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(240, 187);
+            this.groupBox9.Size = new System.Drawing.Size(447, 129);
             this.groupBox9.TabIndex = 3;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Mobs";
             // 
+            // MobComboBox
+            // 
+            this.MobComboBox.FormattingEnabled = true;
+            this.MobComboBox.Location = new System.Drawing.Point(6, 19);
+            this.MobComboBox.Name = "MobComboBox";
+            this.MobComboBox.Size = new System.Drawing.Size(435, 21);
+            this.MobComboBox.TabIndex = 9;
+            // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(6, 155);
+            this.button14.Location = new System.Drawing.Point(6, 98);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(35, 23);
+            this.button14.Size = new System.Drawing.Size(85, 23);
             this.button14.TabIndex = 8;
             this.button14.Text = "Add";
             this.button14.UseVisualStyleBackColor = true;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(98, 132);
+            this.textBox12.Location = new System.Drawing.Point(138, 75);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(136, 20);
+            this.textBox12.Size = new System.Drawing.Size(303, 20);
             this.textBox12.TabIndex = 7;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(57, 135);
+            this.label18.Location = new System.Drawing.Point(101, 78);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(31, 13);
             this.label18.TabIndex = 6;
@@ -539,7 +535,7 @@ namespace ProfileCreator
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(57, 161);
+            this.label17.Location = new System.Drawing.Point(97, 104);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(35, 13);
             this.label17.TabIndex = 5;
@@ -547,15 +543,15 @@ namespace ProfileCreator
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(98, 158);
+            this.textBox11.Location = new System.Drawing.Point(138, 101);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(136, 20);
+            this.textBox11.Size = new System.Drawing.Size(303, 20);
             this.textBox11.TabIndex = 4;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 135);
+            this.label16.Location = new System.Drawing.Point(6, 78);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 13);
             this.label16.TabIndex = 3;
@@ -563,56 +559,50 @@ namespace ProfileCreator
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(153, 106);
+            this.button13.Location = new System.Drawing.Point(280, 46);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(81, 23);
+            this.button13.Size = new System.Drawing.Size(161, 23);
             this.button13.TabIndex = 2;
             this.button13.Text = "Remove";
             this.button13.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(6, 107);
+            this.button12.Location = new System.Drawing.Point(6, 46);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(141, 23);
+            this.button12.Size = new System.Drawing.Size(268, 23);
             this.button12.TabIndex = 1;
             this.button12.Text = "Add selected target";
             this.button12.UseVisualStyleBackColor = true;
-            // 
-            // listBox6
-            // 
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.Location = new System.Drawing.Point(7, 19);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(227, 82);
-            this.listBox6.TabIndex = 0;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.HotspotListBox);
+            this.groupBox8.Controls.Add(this.comboBox3);
             this.groupBox8.Controls.Add(this.label10);
             this.groupBox8.Controls.Add(this.HotspotNameTextBox);
             this.groupBox8.Controls.Add(this.button9);
             this.groupBox8.Controls.Add(this.button8);
-            this.groupBox8.Location = new System.Drawing.Point(538, 12);
+            this.groupBox8.Enabled = false;
+            this.groupBox8.Location = new System.Drawing.Point(9, 231);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(240, 265);
+            this.groupBox8.Size = new System.Drawing.Size(447, 101);
             this.groupBox8.TabIndex = 2;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Hotpots";
             // 
-            // HotspotListBox
+            // comboBox3
             // 
-            this.HotspotListBox.FormattingEnabled = true;
-            this.HotspotListBox.Location = new System.Drawing.Point(6, 19);
-            this.HotspotListBox.Name = "HotspotListBox";
-            this.HotspotListBox.Size = new System.Drawing.Size(228, 186);
-            this.HotspotListBox.TabIndex = 4;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(6, 19);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(435, 21);
+            this.comboBox3.TabIndex = 4;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 215);
+            this.label10.Location = new System.Drawing.Point(7, 49);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 3;
@@ -620,25 +610,25 @@ namespace ProfileCreator
             // 
             // HotspotNameTextBox
             // 
-            this.HotspotNameTextBox.Location = new System.Drawing.Point(47, 211);
+            this.HotspotNameTextBox.Location = new System.Drawing.Point(49, 46);
             this.HotspotNameTextBox.Name = "HotspotNameTextBox";
-            this.HotspotNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.HotspotNameTextBox.Size = new System.Drawing.Size(392, 20);
             this.HotspotNameTextBox.TabIndex = 2;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(153, 237);
+            this.button9.Location = new System.Drawing.Point(280, 72);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(81, 23);
+            this.button9.Size = new System.Drawing.Size(161, 23);
             this.button9.TabIndex = 1;
             this.button9.Text = "Remove";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(7, 237);
+            this.button8.Location = new System.Drawing.Point(6, 72);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(140, 23);
+            this.button8.Size = new System.Drawing.Size(268, 23);
             this.button8.TabIndex = 0;
             this.button8.Text = "Add current location";
             this.button8.UseVisualStyleBackColor = true;
@@ -822,18 +812,61 @@ namespace ProfileCreator
             this.listBox3.Size = new System.Drawing.Size(197, 82);
             this.listBox3.TabIndex = 0;
             // 
-            // treeView1
+            // button15
             // 
-            this.treeView1.Location = new System.Drawing.Point(307, 25);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(225, 440);
-            this.treeView1.TabIndex = 5;
+            this.button15.Location = new System.Drawing.Point(381, 102);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 15;
+            this.button15.Text = "Add target";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(275, 104);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 20);
+            this.textBox8.TabIndex = 16;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(275, 134);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 20);
+            this.textBox9.TabIndex = 17;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(381, 131);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 18;
+            this.button16.Text = "Add target";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(184, 107);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(88, 13);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Add pick up npc:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(184, 137);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(82, 13);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Add turn in npc:";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 499);
+            this.ClientSize = new System.Drawing.Size(1200, 492);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -861,8 +894,7 @@ namespace ProfileCreator
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
+            this.groupBox4.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -923,7 +955,6 @@ namespace ProfileCreator
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ListBox HotspotListBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox HotspotNameTextBox;
         private System.Windows.Forms.Button button9;
@@ -932,8 +963,6 @@ namespace ProfileCreator
         private System.Windows.Forms.ComboBox QuestTypeCombobox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox QuestNameTextBox;
         private System.Windows.Forms.Button button10;
@@ -942,10 +971,8 @@ namespace ProfileCreator
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox questLogQuestsCombo;
-        private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.ListBox listBox6;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label18;
@@ -954,7 +981,15 @@ namespace ProfileCreator
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button CurrentQuestRefreshButton;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox MobComboBox;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label19;
     }
 }
 
